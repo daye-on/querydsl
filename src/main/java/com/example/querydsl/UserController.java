@@ -22,4 +22,10 @@ public class UserController {
     public ResponseEntity<Object> selectUser() {
         return new ResponseEntity<>(userService.findUserAll(), HttpStatus.OK);
     }
+
+    @GetMapping(value = "/insertRand")
+    public ResponseEntity<Object> insertRandomUser() {
+        userService.insertUser();
+        return new ResponseEntity<>(userService.findUserAll(), HttpStatus.OK);
+    }
 }

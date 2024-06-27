@@ -1,6 +1,7 @@
 package com.example.querydsl;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
@@ -26,6 +27,14 @@ public class User {
 
     @Column(name = "USER_REG_DT", columnDefinition = "TIMESTAMP")
     private LocalDateTime userRegDt;
+
+    @Builder
+    public User(long userSeq, String userName, String userAddress, LocalDateTime userRegDt) {
+        this.userSeq = userSeq;
+        this.userName = userName;
+        this.userAddress = userAddress;
+        this.userRegDt = userRegDt;
+    }
 
     @Override
     public String toString() {
