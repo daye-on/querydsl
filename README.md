@@ -1,6 +1,6 @@
 ### JPA + Querydsl 사용 예제
-* yourDomain**/select** : DB 내 모든 사용자 출력
-* yourDomain**/insertRand** : 랜덤으로 사용자 삽입하여 리스트 출력
+* yourDomain/select : DB 내 모든 사용자 출력
+* yourDomain/insertRand : 랜덤으로 사용자 삽입하여 리스트 출력
 
 ### Local setting
 * application.properties에서 로컬 데이터베이스 설정 필요
